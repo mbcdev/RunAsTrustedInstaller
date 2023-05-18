@@ -37,7 +37,7 @@ jobs:
       
     - name: Upload
       uses: actions/upload-artifact@v2
-        with: 
-          name: assets
-          path: ${{github.workspace}}/build/Release/
+      with:
+        name: assets
+        path: ${{github.workspace}}/build/Release/
       
