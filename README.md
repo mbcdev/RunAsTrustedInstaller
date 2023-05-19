@@ -3,7 +3,7 @@ A Windows command-line utility to run programs with TrustedInstaller privileges.
 
 ## Description
 On Windows, TrustedInstaller privileges sometimes can be helpful to modify/delete criticial system files/folders that are protected by the OS.  
-Likewise, there might be a need to deal with certain Registry keys that are protected with an ACL which restricts access the TrustedInstaller account.  
+Likewise, there might be a need to deal with certain Registry keys that are protected with an ACL which restricts access to the TrustedInstaller account.  
 The utility was developed as a standalone executable and does not require any installation.
 
 ## Getting Started
