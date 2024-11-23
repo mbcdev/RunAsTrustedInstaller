@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35506.116 d17.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RunAsTI", "RunAsTI.vcxproj", "{A39C5F40-DD2B-3A32-B8B5-5FD7CA1DF167}"
+	ProjectSection(ProjectDependencies) = postProject
+		{4B847C33-2D23-410A-8A48-FBE9F0EEA96E} = {4B847C33-2D23-410A-8A48-FBE9F0EEA96E}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RunAsTIShellExtension", "ShellExtension\RunAsTIShellExtension.vcxproj", "{4B847C33-2D23-410A-8A48-FBE9F0EEA96E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A39C5F40-DD2B-3A32-B8B5-5FD7CA1DF167}.Debug|x64.ActiveCfg = Debug|x64
+		{A39C5F40-DD2B-3A32-B8B5-5FD7CA1DF167}.Debug|x64.Build.0 = Debug|x64
+		{A39C5F40-DD2B-3A32-B8B5-5FD7CA1DF167}.Release|x64.ActiveCfg = Release|x64
+		{A39C5F40-DD2B-3A32-B8B5-5FD7CA1DF167}.Release|x64.Build.0 = Release|x64
+		{4B847C33-2D23-410A-8A48-FBE9F0EEA96E}.Debug|x64.ActiveCfg = Debug|x64
+		{4B847C33-2D23-410A-8A48-FBE9F0EEA96E}.Debug|x64.Build.0 = Debug|x64
+		{4B847C33-2D23-410A-8A48-FBE9F0EEA96E}.Release|x64.ActiveCfg = Release|x64
+		{4B847C33-2D23-410A-8A48-FBE9F0EEA96E}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4F263B2A-4489-35EE-915B-91872F54CF5C}
+	EndGlobalSection
+EndGlobal

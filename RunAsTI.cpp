@@ -1,4 +1,5 @@
 ﻿#include <iostream>
+#include <Shlwapi.h>
 
 #include "Utils.h"
 
@@ -12,7 +13,13 @@ int main()
 
 	if (lpArgs != NULL)
 	{
-		if (nArgs > 1)
+		if (nArgs == 2 && !_wcsicmp(lpArgs[1], L"/install")) {
+			ShellExecute(NULL, L"open", L"regsvr32.exe", L"/i RunAsTIShellExtension.dll", NULL, SW_SHOWNORMAL);
+		}
+		else if (nArgs == 2 && !_wcsicmp(lpArgs[1], L"/uninstall")) {
+			ShellExecute(NULL, L"open", L"regsvr32.exe", L"/u RunAsTIShellExtension.dll", NULL, SW_SHOWNORMAL);
+		}
+		else if (nArgs > 1)
 		{
 			std::wstring cmdApp;
 			std::wstring cmdArgs;
@@ -25,10 +32,12 @@ int main()
 				lpCommandLine++;
 			}
 
-			if(nArgs > 2)
+			if (nArgs > 2) {
 				std::wcout << "Executing '" << cmdApp.c_str() << "' with args '" << cmdArgs.c_str() << "'..." << std::endl;
-			else
+			}
+			else {
 				std::wcout << "Executing '" << cmdApp.c_str() << "'..." << std::endl;
+			}
 
 			if (ExecuteCommand(cmdApp, cmdArgs))
 			{
@@ -40,7 +49,11 @@ int main()
 			}
 		}
 		else {
-			std::wcout << "Usage: " << *lpArgs << " <cmdline>" << std::endl;
+			std::wstring exeName = *lpArgs;
+			PathStripPath(&exeName[0]);
+			std::wcout << "Usage: " << exeName.c_str() << " <cmdline>    Executes <cmdline> with TrustedInstaller privileges." << std::endl;
+			std::wcout << "       " << exeName.c_str() << " /install     Installs Shell Extension Handler." << std::endl;
+			std::wcout << "       " << exeName.c_str() << " /uninstall   Uninstalls Shell Extension Handler." << std::endl;
 		}
 		LocalFree(lpArgs);
 	}

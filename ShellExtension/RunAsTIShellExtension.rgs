@@ -1,0 +1,37 @@
+HKCR
+{
+	RunAsTI.Shell.1 = s 'RunAsTIShell Class'
+	{
+		CLSID = s '{3357a0e4-15a5-42fa-b591-10039a6c02a6}'
+	}
+	RunAsTI.Shell = s 'RunAsTIShell Class'
+	{
+		CLSID = s '{3357a0e4-15a5-42fa-b591-10039a6c02a6}'
+		CurVer = s 'RunAsTI.Shell.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {3357a0e4-15a5-42fa-b591-10039a6c02a6} = s 'RunAsTIShell Class'
+		{
+			ProgID = s 'RunAsTI.Shell.1'
+			VersionIndependentProgID = s 'RunAsTI.Shell'
+			ForceRemove Programmable
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			TypeLib = s '{f11bfb86-3b2a-4346-bf4f-f6b3182c8812}'
+			Version = s '1.0'
+		}
+	}
+	NoRemove exefile
+	{
+		NoRemove ShellEx
+		{
+			NoRemove ContextMenuHandlers
+			{
+				ForceRemove RunAsTI = s '{3357a0e4-15a5-42fa-b591-10039a6c02a6}'
+			}
+		}
+	}
+}

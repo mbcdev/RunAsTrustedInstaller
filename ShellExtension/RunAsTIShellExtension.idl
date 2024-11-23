@@ -1,0 +1,40 @@
+// RunAsTIShellExtension.idl : IDL source for RunAsTIShellExtension
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (RunAsTIShellExtension.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	object,
+		uuid(7e288a16-2316-4895-ae2c-015cc952622c),
+		dual,
+		nonextensible,
+		pointer_default(unique),
+		helpstring("IRunAsTIShell Interface")
+]
+interface IRunAsTIShell : IDispatch
+{
+};
+[
+	uuid(f11bfb86-3b2a-4346-bf4f-f6b3182c8812),
+		version(1.0),
+		helpstring("RunAsTIShellExtension 1.0 Type Library")
+]
+library RunAsTIShellExtensionLib
+{
+	importlib("stdole2.tlb");
+	[
+		uuid(3357a0e4-15a5-42fa-b591-10039a6c02a6),
+			helpstring("RunAsTIShellExtension")
+	]
+		coclass RunAsTIShell
+	{
+		[default] interface IRunAsTIShell;
+	};
+};
+
+import "shobjidl.idl";
+

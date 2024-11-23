@@ -53,8 +53,8 @@ END
 //
 
 VS_VERSION_INFO VERSIONINFO
- FILEVERSION 0,1,0,0
- PRODUCTVERSION 0,1,0,0
+ FILEVERSION 0,2,0,0
+ PRODUCTVERSION 0,2,0,0
  FILEFLAGSMASK 0x3fL
 #ifdef _DEBUG
  FILEFLAGS 0x1L
@@ -71,12 +71,12 @@ BEGIN
         BEGIN
             VALUE "CompanyName", "mbcdev"
             VALUE "FileDescription", "RunAsTrustedInstaller"
-            VALUE "FileVersion", "0.1.0.0"
+            VALUE "FileVersion", "0.2.0.0"
             VALUE "InternalName", "RunAsTI.exe"
-            VALUE "LegalCopyright", "Copyright (c) 2023 mbcdev"
+            VALUE "LegalCopyright", "Copyright (c) 2023-2024 mbcdev"
             VALUE "OriginalFilename", "RunAsTI.exe"
             VALUE "ProductName", "RunAsTrustedInstaller"
-            VALUE "ProductVersion", "0.1.0.0"
+            VALUE "ProductVersion", "0.2.0.0"
         END
     END
     BLOCK "VarFileInfo"
