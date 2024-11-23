@@ -1,6 +1,6 @@
 # RunAsTrustedInstaller
 
-A Windows command-line utility to run programs with TrustedInstaller privileges.
+A Windows command-line utility and Explorer extension to run programs with TrustedInstaller privileges.
 
 ## Description
 
